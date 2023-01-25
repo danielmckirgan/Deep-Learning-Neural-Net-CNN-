@@ -24,7 +24,8 @@ import sys
 from tqdm import tqdm
 
 # read in csv file, in this case I had a tsv so the sep='\t' will tell the function the file is tab separated
-train = pd.read_csv('Filepath to metadata/categorical data: Project/metadata/...', sep='\t')
+train = pd.read_csv('Filepath to metadata/categorical data: Project/metadata/...', sep='\t',
+                    dtype={'True_Samp_Num': str})
 
 # Print train to ensure the data is correctly formatted
 print(train)
