@@ -32,7 +32,7 @@ Once the .jar file is up and running, choose the root directory that you have na
 
 This will start the program and you can get to collecting the pixel data.
 
-# Collecting Data
+# Collecting the Data
 
 The program should look something like this:
 ![Image Sampler](https://user-images.githubusercontent.com/90268829/214688629-e3dc2039-e74e-4519-9332-86c7041d8e17.png)
@@ -52,14 +52,20 @@ The middle section are close-ups of the pixel you have chosen to characterize. T
 
 ![Image Sampler_Pixel_and_Area_Emphasis](https://user-images.githubusercontent.com/90268829/214692169-2eaba339-96d2-4a3c-b2c4-5691f48ed69b.png)
 
-Finally, I will discuss the dropdown menu labeled "Parameters". After clicking this there are three options, choose set sampling parameters and it will pull up a screen that looks like this:
+Finally, I will discuss the dropdown menu labeled "Parameters". After clicking this there are three options, choose "Set Sampling Parameters" and it will pull up a screen that looks like this:
 
-![Image_Sampler_Parameters](https://user-images.githubusercontent.com/90268829/214693158-8dc682d5-2bee-46ce-9e11-daefc1aac4f8.png)
+![Image_Sampler_Parameters](https://user-images.githubusercontent.com/90268829/214706985-ab5cc3b5-bd6f-4b89-aae2-e7fa59912835.png)
 
 
-After all the parameters have been set you can get to sampling your images! Below I have posted a screen recording of doing some sampling, showing how the program works and its functionalities.
+After all the parameters have been set you can get to sampling your images! Below I have posted a screen recording of doing some sampling, showing how the program works and its functionalities. The Autosave feature will automatically create training, testing, and validation folders in your home folder so turning this on allows for more efficient collection of data.
 
 https://user-images.githubusercontent.com/90268829/214700253-2ec635bf-de3d-45d9-9644-7ebbbc9bf8b1.mp4
+
+
+# Cleaning the Data
+
+
+Once you have collected all your data, the information will all be stored in the home folder directory you created earlier. There will be 4 files of images labeled "Overview", "Pixel", "Montage", and "Local." These files are the pixels that you selected, but their order is important so do not move around these files at all! There will also be a metadata file that was created in .xlsx. There will be a lot of data here so it is time to put your data cleaning skills to work. There are only a few columns you should need: All the category columns need to stay (they should all have either a 1 or 0), The sample number should stay and the timestamp also needs to stay. Every other column can be deleted to simplify your excel sheet. The last step is to concatenate the sample number and timestamp with a "." between them. If you direct your attention to one of the pixel image folders the concatenated sample number and timestamp with the "." in the middle are the same as the numerical digits in the file's name. The code has extra instructions on how to import the data from these files.
 
 
 # Conclusion
