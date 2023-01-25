@@ -1,4 +1,4 @@
-# Deep Learning Neural Net CNN
+# Deep Learning Neural Net (Convolutional Neural Net)
 A Deep Learning Neural Net that works to classify pixels in an image.
 
 The original project for this code was used in creting a plant image classification model.
