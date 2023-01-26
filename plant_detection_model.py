@@ -23,9 +23,13 @@ import matplotlib.pyplot as plt
 import sys
 from tqdm import tqdm
 
-# read in csv file, in this case I had a tsv so the sep='\t' will tell the function the file is tab separated
+# read in csv file, in this case I had a tsv so the sep='\t' will tell the function the file is tab separated.
+# Line 32 should be the column name that you put the concatenated Sample Number and Timestamp (if you did not read the README the instructions
+# for that are in there). We want the column to be read in as a string because if not the program will think it is a float and will leave off
+# any trailing 0's. These 0's are important later when the program is trying to iterate through yout metadata file and match that to the pixel data.
+
 train = pd.read_csv('Filepath to metadata/categorical data: Project/metadata/...', sep='\t',
-                    dtype={'True_Samp_Num': str})
+                    dtype={'Your Concatenated Sample Number': str})
 
 # Print train to ensure the data is correctly formatted
 print(train)
@@ -36,7 +40,7 @@ train_image = []
 # Iterate through image file to extract the image data
 for i in tqdm(range(train.shape[0])):
     img = image.load_img(
-        r'Filepath to image folder: Project/Images/...' + str(train['Sample Number'][i]) +
+        r'Filepath to image folder: Project/Images/...' + str(train['(Same from line 32'][i]) +
         '.png', target_size=(100, 100, 3))  # target size smaller than 250x250 for quicker processing, but this will
     # change the size they are read in at
     img = image.img_to_array(img)
@@ -47,7 +51,7 @@ for i in tqdm(range(train.shape[0])):
 X = np.array(train_image)
 
 # Here we want to get rid of any category in the metadata file that will not be a categorical output, for example
-# "Sample Number", takes in strings separated by commas
+# "Sample Number" is not a value we want output from the model, so we will drop it. This step is much easier if you have cleaned up your excel data
 y = np.array(train.drop({'Any categorical value in metadata file that is not an output'}, axis=1))
 
 # Splitting the dataset into training and testing, this will be done randomly every time the program is run
