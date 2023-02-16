@@ -3,10 +3,12 @@ A Deep Learning Neural Net that works to classify pixels in an image.
 
 The original project for this code was used in creating a plant image classification model.
 
-#Image Folder
+# Image Folder
 
-To use the original dataset for this project download the Window.zip file. This contains the original dataset used along with the appropriate metadata.
+To use the original dataset for this project download the Window.zip file. This contains the original dataset used along with the appropriate metadata. Download both of those to the same folder, this will be used as your directory.
 
+# The Model
+The .py file contains the code to load in the metadata and image folder, then it splits them into training and testing groups and feeds the training group into the model. Once the model completes its calculations it will output a final percentage of accuarcy as well as save two graphs to your directory that outline the accuracy and the loss.
 
 # Conclusion
 
