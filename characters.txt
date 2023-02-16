@@ -1,3 +1,0 @@
-The characters text file is what will appear as your categories on the image sampler.
-
-This should be a list of the categories you want to use for the model.
