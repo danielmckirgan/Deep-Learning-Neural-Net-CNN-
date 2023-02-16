@@ -1,3 +1,0 @@
-This file is to be filled by whomever is completing the prohect. This should be a list of the titles from your downloaded pictures. 
-
-For example, the file from the original .txt for the original project contained a list of the plant names.
